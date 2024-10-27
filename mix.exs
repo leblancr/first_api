@@ -7,7 +7,12 @@ defmodule FirstApi.MixProject do
       version: "0.1.0",
       elixir: "~> 1.17",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # Docs
+      extras: ["README.md"], # Optional additional files to include
+      main: "FirstApi", # The main module to be documented
+      name: "FirstApi"
     ]
   end
 
@@ -24,6 +29,7 @@ defmodule FirstApi.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.4"}
     ]

@@ -1,11 +1,21 @@
 defmodule FirstApi.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
-  @moduledoc false
+  @moduledoc """
+  This module provides functionalities for building RESTful APIs.
+  """
 
   use Application
 
   @impl true
+  @doc """
+  Starts the API server.
+
+  ## Examples
+
+      iex> FirstApi.start()
+      :ok
+  """
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: FirstApi.Worker.start_link(arg)
