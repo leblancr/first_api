@@ -24,3 +24,5 @@ first_api2-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+.idea/
